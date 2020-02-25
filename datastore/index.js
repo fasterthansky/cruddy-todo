@@ -25,21 +25,14 @@ exports.readAll = (callback) => {
   //   return { id, text };
   // });
   // callback(null, data);
-  fs.readdir(path.join(exports.dataDir, `${id}.txt`), (err, file) => {
+  fs.readdir(path.join(exports.dataDir, `${id}.txt`), (err, files) => {
     if (err) {
-      console.log('Error');
+      // console.log('Error');
+
     } else {
-      var file = _.map(items, (text, id) => {
-        return { id, text };
-      });
-      if (err) {
-        console.log('Error');
-      } else {
-        callback(null, file);
-      }
+      callback(null, files);
     }
   });
-
 };
 // fs.readdir(path[, options], callback)
 
