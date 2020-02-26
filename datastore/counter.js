@@ -51,10 +51,5 @@ exports.getNextUniqueId = (callback) => {
   });
 };
 
-// should use error first callback pattern
-// should give ann id as a zero padded string
-// should give the next id - based on the count in the file
-// should update the counter file
-
 // Configuration -- DO NOT MODIFY //////////////////////////////////////////////
 exports.counterFile = path.join(__dirname, 'counter.txt');

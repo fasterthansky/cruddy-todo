@@ -20,18 +20,14 @@ exports.create = (text, callback) => {
 };
 // fs.writeFile(file, data[, options], callback)
 
+//Promise.all()
 exports.readAll = (callback) => {
-  // var data = _.map(items, (text, id) => {
-  //   return { id, text };
-  // });
+  var data = _.map(items, (text, id) => {
+    return { id, text };
+  });
   // callback(null, data);
   fs.readdir(path.join(exports.dataDir, `${id}.txt`), (err, files) => {
-    if (err) {
-      // console.log('Error');
-
-    } else {
-      callback(null, files);
-    }
+    return Promise.all(data);
   });
 };
 // fs.readdir(path[, options], callback)

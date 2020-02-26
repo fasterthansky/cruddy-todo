@@ -115,7 +115,7 @@ describe('todos', () => {
       });
     });
 
-    // Refactor this test when completing `readAll`
+    // Refactor this test when completing `readAll` //change to text instead of id
     it('should return an array with all saved todos', (done) => {
       const todo1text = 'todo 1';
       const todo2text = 'todo 2';
